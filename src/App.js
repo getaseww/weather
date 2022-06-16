@@ -28,7 +28,7 @@ export default function App() {
 
   const updateData=async(e)=>{
     e.preventDefault()
-    await fetch(`https://api.openweathermap.org/data/2.5/weather/?lat=${newLat}&lon=${newLong}&units=metric&APPID=77148a0a429e785741acec42e0b091e6`)
+    await fetch(`https://api.openweathermap.org/data/2.5/weather/?lat=${newLat}&lon=${newLong}&units=metric&APPID=${process.env.apiKey}}`)
         .then(res => res.json())
         .then(result => {
           setData(result)
